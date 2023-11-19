@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+</head>
+<body>
+    <form id="form">
+        <label for="cep">Cep: </label>
+        <input type="text" name="cep" id="cep" maxlength="9" onblur="buscaCep(this.value)"> <br> 
+        <label for="rua">Rua: </label>
+        <input type="text" name="rua" id="rua"> <br>
+        <label for="bairro">Bairro: </label>
+        <input type="text" name="bairro" id="bairro"> <br>
+        <label for="cidade">Cidade: </label>
+        <input type="text" name="cidade" id="cidade"> <br>
+        <label for="estado">Estado: </label>
+        <input type="text" name="estado" id="estado"> <br>
+        <input type="button" value="Enviar">
+    </form>
+    <script>
+        const form = document.getElementById('form');
+        const cep = document.getElementById('cep');
+        const rua = document.getElementById('rua');
+        const bairro = document.getElementById('bairro');
+        const cidade = document.getElementById('cidade');
+        const estado = document.getElementById('estado');
+        
+        function buscaCep(valor){
+            const mensagem = document.querySelector('#msgErro');
+            if(mensagem){
+                form.removeChild(mensagem);
+            }
+            var cepValido = valor.replace(/\D/g, "");
+            if(cepValido != ""){
+                var padraoCep = /^[0-9]{8}$/;
+                if(padraoCep.test(cepValido)){
+                    rua.value    = "buscando..."
+                    bairro.value = "buscando..."
+                    cidade.value = "buscando..."
+                    estado.value = "buscando..."
+                    
+                    // URL: viacep.com.br/ws/01001000/json/?callback=callback_name
+                    const script = document.createElement('script');
+                    script.src = `https://viacep.com.br/ws/${cepValido}/json/?callback=retorno`
+                    document.body.appendChild(script);
+                }
+                else msgError("Inválido")
+            }
+            else msgError("Preencha Corretamente")
+        }
+        function retorno(resposta){
+            if(!("erro" in resposta)){
+                cep.value    = resposta.cep;
+                rua.value    = resposta.logradouro;
+                bairro.value = resposta.bairro;
+                cidade.value = resposta.localidade;
+                estado.value = resposta.uf;
+            }
+            else msgError("Cep Não Encontrado")
+        }
+
+        function msgError(msg) {
+            erro = document.createElement('label')
+            erro.style.color = 'red'
+            erro.style.fontWeight = 'bold'
+            erro.id = "msgErro"
+            erro.innerText = `CEP: ${cep.value} ${msg}`
+            
+            cep.parentNode.insertBefore(erro, cep.nextSibling) // Inserindo antes do campo CEP
+            form.reset(); // Limpar os campos do form
+        }
+
+    </script>
+</body>
+</html>

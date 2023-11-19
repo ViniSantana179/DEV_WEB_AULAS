@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(245, 245, 245);
+    font-family: sans-serif;
+}
+
+main {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+label, input {
+    display: inline-block;
+    margin: 0px 40px;
+    margin-bottom: 5px;
+}
+
+label {
+    width: calc(40% - 80px);
+    font-weight: bold;
+}
+
+input {
+    width: calc(60% - 110px);
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.btn {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.btn button {
+    border: none;
+
+}
+
+.laranja {
+    background-color: rgb(226, 104, 3);
+    padding: 5px 10px;
+    color: white;
+}
+
+.azul {
+    background-color: rgb(34, 126, 212);
+    padding: 5px 10px;
+    color: white;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+<main>
+    <section>
+        <h1>Formulários</h1>
+        <form>
+            <label for="texto">Texto: </label>
+            <input type="text" name="texto" id="textoId" placeholder="Digite um Texto">
+            <br><br>
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha"> <br><br>
+            <label for="email">Email: </label>
+            <input type="email" name="email"> <br><br>
+            <label for="numero">Numero: </label>
+            <input type="number" name="numero" id=""><br>
+            <hr>
+            <label for="checkbox">Seleção Multipla: </label> <br>
+            <input type="checkbox" name="checkbox[]" value="opcao1"> op1 <br>
+            <input type="checkbox" name="checkbox[]" value="opcao2"> op2 <br>
+            <input type="checkbox" name="checkbox[]" value="opcao3"> op3 <br>
+            <hr>
+            <label for="Selecao">Seleção Unica</label> <br>
+            <input type="radio" name="Selecao" value="opcao1"> Opção 1 <br>
+            <input type="radio" name="Selecao" value="opcao2"> Opção 2 <br>
+            <input type="radio" name="Selecao" value="opcao3"> Opção 3 <br>
+            <hr>
+            <label for="data">Data: </label>
+            <input type="date" name="data"> <br>
+            <label for="datahora">Data e Hora: </label>
+            <input type="datetime-local" name="datahora"> <br>
+            <label for="time">Time: </label>
+            <input type="time" name="time"> <br>
+            <hr>
+            <label for="selecionar">Selecione: </label>
+            <select name="selecionar" id="">
+                <option value="0">Nenhum</option>
+                <option value="opcao1">Opção 1</option>
+                <option value="opcao2">Opção 2</option>
+                <option value="opcao3">Opção 3</option>
+            </select>
+            <hr>
+            <label for="area">Texto em Area</label> <br>
+            <textarea name="area" cols="30" rows="10"></textarea>
+            <hr>       
+            <input type="submit"><br>
+            <input type="submit" value="Salvar"><br>
+            <input type="reset" value="Redefinir"> <br>
+            <input type="button" name="" value="Alerta" onclick="alert('Função Chata')">      
+        </form>
+    </section>
+</main>
+</body>
+</html>

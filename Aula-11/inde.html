@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <p id="saida">
+                Trabalhando Com Vetor
+            </p>
+        </section>
+    </main>>
+    <script>
+        const saida = document.getElementById('saida');
+
+        var frutas = ['Maça', 'Banana', 'Laranja', 'Abacaxi', 'Morango']
+
+        for(i of frutas)
+        {
+            saida.innerText +=  `\n${i}`;
+        }
+
+        
+        saida.innerText +=  `\n`;
+        frutas.forEach((fruta, chave) => {
+            saida.innerText +=  `\n ${chave} - ${fruta}`;
+        })
+        
+        saida.innerText +=  `\n`;
+        frutas.push("Melancia")
+        saida.innerHTML += "\n\n Adicionando no vetor: " + frutas;
+
+        saida.innerText +=  `\n`;
+        frutas.pop();
+        saida.innerHTML += "\n\n  Removendo Ultimo Elemento: " + frutas;
+        
+        saida.innerText +=  `\n`;
+        frutas.unshift("Melancia")
+        saida.innerHTML += "\n\n  Adiciando no inicio: " + frutas;
+        
+        saida.innerText +=  `\n`;
+        frutas.shift()
+        saida.innerHTML += "\n\n  Removendo inicio: " + frutas;
+        
+        var novoVetor = frutas.slice(1, 3);
+        saida.innerText += "\n\n" + novoVetor;
+        
+        // 2 Elemnetos - Remover
+        frutas.splice(1, 1)
+        saida.innerText += "\n\n" + frutas;
+        
+        // 3 Elementos - Adicionando Elementos
+        frutas.splice(1, 0, "Kiwi")
+        saida.innerText += "\n\n" + frutas;
+        
+        // Adicinando e Removendo ao mesmo tempo 
+        frutas.splice(1, 1, "Banana")
+        saida.innerText += "\n\n" + frutas;
+        
+        // Descobre o index do valor passado
+        var index = frutas.indexOf("Maça")
+        saida.innerText += "\n\n" + index;
+
+    </script>
+    <br><br><br><br><br><br><br><br>
+</body>
+</html>

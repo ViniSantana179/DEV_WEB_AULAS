@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Elementos</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const form = document.createElement('form')
+    form.id = "form";
+    form.action = 'submit()'
+    
+    const labelNome = document.createElement('label')
+    labelNome.for = 'nome'
+    labelNome.innerText = 'Nome: '
+    
+    const inputNome = document.createElement('input')
+    inputNome.setAttribute('type', 'text');
+    inputNome.setAttribute('name', 'nome');
+    inputNome.setAttribute('id', 'nome');
+    
+    const labelSenha = document.createElement('label')
+    labelSenha.for = 'senha'
+    labelSenha.innerText = 'Senha: '
+    
+    const inputSenha = document.createElement('input')
+    inputSenha.setAttribute('type', 'password');
+    inputSenha.setAttribute('name', 'senha');
+    inputSenha.setAttribute('id', 'senha');
+
+    form.appendChild(labelNome);
+    form.appendChild(inputNome);
+    form.innerHTML += "<br>"
+    form.appendChild(labelSenha);
+    form.appendChild(inputSenha);
+    form.innerHTML += `<br> <input type="reset">`
+    document.body.appendChild(form); // Colocando um elemento dentro do body
+
+</script>
+</html>

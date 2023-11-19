@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(231, 248, 248);
+    font-family: sans-serif;
+}
+
+h1, h2{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+#container {
+    background-color: rgb(197, 196, 196);
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 5px  5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.block {
+    display: block;
+    background-color: rgb(190, 216, 238);
+    padding: 10px;
+}
+
+.azul {
+    display: block;
+    background-color: aquamarine !important;
+}
+
+.inline {
+    display: inline;
+    margin: 10;
+    background-color: rgb(216, 255, 242);
+    padding: 5px;
+    margin: 10px;
+}
+
+.inline-block {
+    display: inline-block;
+    background-color: rgb(189, 255, 233);
+    width: calc(25% -23px);
+    font-size: 10px;
+    text-align: center;
+    /* padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 50px; */
+    padding: 30px 10px;
+
+}
+
+.font {
+    font-size: 0;
+}
+
+.font h2 {
+    font-size: 24px;
+}
+
+.none{
+    display: none;
+
+}
+
+#mostrar {
+    background-color: rgb(44, 101, 151);
+    padding: 10px;
+}
+/* 
+ul {
+    list-style-image: url('./img/IMG-worlds-of-adventure.webp');
+} */
+

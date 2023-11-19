@@ -1,0 +1,32 @@
+body {
+    background-color: #ddd;
+}
+
+#tabela {
+    background-color: white;    
+}
+
+#tabela a {
+    color: rgb(139, 139, 255);
+}
+
+th, td {
+    text-align: center;
+}
+
+#tabela tr:nth-child(even){
+    background-color: #ddd;
+}
+
+#tabela tr:nth-child(odd){
+    background-color: rgb(180, 180, 255);
+}
+#tabela td:nth-child(3){
+    color: rgb(79, 79, 179);
+    font-weight: bold;
+}
+
+#tabela td:nth-child(2n+1){
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}

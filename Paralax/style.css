@@ -1,0 +1,69 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul a li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+#menu {
+    background-color: #333;
+    text-align: center;
+    padding: 30px 0px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    transition: padding ease-in-out 0.5s;
+}
+
+#menu.shrink{
+    padding: 10px 0px;
+}
+
+#section1{
+    background-image: url('./img/A-Onda-Imagem-de-WikiImages-por-Pixabay--e1601210938944.jpg');
+}
+#section2{
+    background-image: url('./img/mascara-de-demonio-japonesa-ou-mascara-oni-com-estilo-de-desenho-a-mao-no-fundo-branco_7130-2037.avif');
+}
+#section3{
+    background-image: url('./img/mitologia-japonesa.webp');
+}
+
+.paralax {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* altura maxima da image */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.conteudo {
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Js</title>
+    <style>
+        dialog {
+            border: none;
+            width: 70%;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        dialog::backdrop{
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Query Selector</h1>    
+    <p>Este é um Paragrafo</p>
+    <div>
+        <div>
+            <p>Este é um Paragrafo dentro de duas divs</p>
+        </div>
+    </div>
+    <span >
+        Tag Span
+        <p>Este é um paragrafo dentro de um span</p>
+    </span>
+    <a href="#">Abrir Modal</a>
+    <dialog>
+        <h2>Titulo Modal</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis asperiores quisquam aspernatur praesentium quibusdam, impedit officiis? Tempore dolor molestiae saepe quas vitae labore consectetur, a minus officia cumque repellat et.</p>
+        <a href="#">Fechar Modal</a>
+    </dialog>
+    <script>
+        const p = document.querySelector('span p');
+        const paragrafos = document.querySelectorAll('p')
+        paragrafos.forEach(ele => {
+            ele.style.color = 'green'
+        })
+        const span = document.querySelector('span');
+        span.style.display = 'block'
+        span.style.padding = '10px'
+        span.style.fontWeight = 'bold'
+        span.style.backgroundColor = 'lightblue'
+
+        p.style.color = 'red'
+ 
+        // MODAL
+        const modal = document.querySelector('dialog');
+        const btnModal = document.querySelectorAll('a');
+
+        btnModal[0].onclick = () => {
+            modal.showModal();
+        }
+        
+        btnModal[1].onclick = () => {
+            modal.close();
+        }
+
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal){
+                modal.close();
+                console.log(e.target)
+            }
+        })
+ </script>
+
+</body>
+</html>
